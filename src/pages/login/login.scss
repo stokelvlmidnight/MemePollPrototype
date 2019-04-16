@@ -1,0 +1,52 @@
+page-login {
+    #memePollLogo {
+        display: block;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    #loginWrapper {
+        position: relative;
+        padding: 2% 10% 10% 10%;
+    }
+
+    #oauthWrapper {
+        text-align: center;
+        padding: 5% 10% 10% 10%;
+        font-size: -webkit-xxx-large;
+    }
+
+    #loginbutton {
+        background-color: darkslategrey;
+        display: block;
+        margin: auto;
+        margin-top: 8%;
+        width: 125px;
+    }
+
+    #facebook {
+        color: darkblue;
+    }
+
+    #google {
+        color: red;
+    }
+
+    #twitter {
+        color: skyblue;
+    }
+
+    #github {
+
+    }
+
+    #oauthTitle {
+        font-size: large;
+        padding: 5px;
+    }
+
+    #backLink {
+        font-size: large;
+        padding-top: 20px; 
+    }
+}

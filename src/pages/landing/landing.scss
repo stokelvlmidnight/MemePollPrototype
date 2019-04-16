@@ -1,0 +1,28 @@
+page-landing {
+    #memePollLogo {
+        display: block;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    #loginWrapper {
+        position: relative;
+        padding: 10%;
+    }
+
+    #loginbutton {
+        background-color: darkslategrey;
+        display: block;
+        margin: auto;
+        margin-top: 10%;
+        width: 125px;
+    }
+
+    #registerbutton {
+        background-color: darkslategrey;
+        display: block;
+        margin: auto;
+        margin-top: 3%;
+        width: 125px;
+    }
+}
