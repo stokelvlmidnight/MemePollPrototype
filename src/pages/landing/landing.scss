@@ -10,7 +10,7 @@ page-landing {
         padding: 10%;
     }
 
-    #loginbutton {
+    #loginButton {
         background-color: darkslategrey;
         display: block;
         margin: auto;
@@ -18,11 +18,19 @@ page-landing {
         width: 125px;
     }
 
-    #registerbutton {
+    #registerButton {
         background-color: darkslategrey;
         display: block;
         margin: auto;
         margin-top: 3%;
         width: 125px;
+    }
+
+    #dashboardButton {
+        background-color: darkslategrey;
+        display: block;
+        margin: auto;
+        margin-top: 3%;
+        width: 140px;
     }
 }

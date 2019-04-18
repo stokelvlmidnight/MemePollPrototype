@@ -15,6 +15,7 @@ import { RegistrationPage } from '../pages/registration/registration';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { PollResultPage } from '../pages/poll-result/poll-result';
 import { LandingPage } from '../pages/landing/landing';
+import { CategoriesPage } from '../pages/categories/categories';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LandingPage } from '../pages/landing/landing';
     RegistrationPage,
     TutorialPage, 
     PollResultPage,
-    LandingPage
+    LandingPage,
+    CategoriesPage
 
   ],
   imports: [
@@ -49,7 +51,8 @@ import { LandingPage } from '../pages/landing/landing';
     RegistrationPage,
     TutorialPage, 
     PollResultPage,
-    LandingPage
+    LandingPage,
+    CategoriesPage
   ],
   providers: [
     StatusBar,

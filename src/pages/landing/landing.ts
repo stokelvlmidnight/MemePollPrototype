@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { DashboardPage } from '../dashboard/dashboard';
 
 @IonicPage()
 @Component({
@@ -23,6 +24,10 @@ export class LandingPage {
   toLogin() {
     this.navCtrl.push(LoginPage)
     this.loginWrapper = false
+  }
+
+  toDashboard() {
+    this.navCtrl.setRoot(DashboardPage)
   }
 
 }

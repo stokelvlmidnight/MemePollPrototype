@@ -2,7 +2,22 @@
   <img id="memePollLogo" src="./../assets/imgs/memepolllogo.png">
 
   <div id='loginWrapper' *ngIf='loginWrapper'>
-    <button id="loginbutton" type="submit" (click)='toLogin()' ion-button>LOGIN</button>  
-    <button id="registerbutton" type="submit" ion-button>REGISTER</button>  
+    <button id="loginButton" type="submit" (click)='toLogin()' ion-button>LOGIN</button>  
+    <button id="registerButton" type="submit" ion-button>REGISTER</button>
+    <button id="dashboardButton" type="submit" (click)='toDashboard()' ion-button>Go to Dashboard</button>  
   </div>
+  <ion-list>
+
+      <ion-item-sliding>
+    
+        <ion-item >
+            <span style='text-align: center'>Slide to Poll!</span>
+        </ion-item>
+    
+        <ion-item-options>
+          <button danger > Delete</button>
+        </ion-item-options>
+      </ion-item-sliding>
+    
+      </ion-list>
 </ion-content>

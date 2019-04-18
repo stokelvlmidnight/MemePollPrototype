@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the DashboardPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { CategoriesPage } from '../categories/categories';
 
 @IonicPage()
 @Component({
@@ -15,11 +9,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DashboardPage {
 
+  slideOpts = {
+    effect: 'flip',
+    autoHeight: true
+  };
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DashboardPage');
+  }
+
+  toCategories() {
+    this.navCtrl.push(CategoriesPage)
+  }
+
+  toDashboard() {
+    this.navCtrl.push(DashboardPage)
   }
 
 }

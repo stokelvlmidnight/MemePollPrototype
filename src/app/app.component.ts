@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { SplashPage } from '../pages/splash/splash';
 import { LoginPage } from '../pages/login/login';
 import { LandingPage } from '../pages/landing/landing';
+import { DashboardPage } from '../pages/dashboard/dashboard';
 
 @Component({
   templateUrl: 'app.html'
@@ -15,17 +16,37 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // rootPage: any = SplashPage;
-  rootPage: any = LandingPage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
+  userOptions: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Splash', component: SplashPage }
+    // this.pages = [
+    //   { title: 'Sports', component: HomePage },
+    //   { title: 'Health', component: SplashPage },
+    //   { title: 'Food', component: HomePage },
+    //   { title: 'Politics', component: SplashPage },
+    //   { title: 'Art', component: HomePage },
+    //   { title: 'Movies', component: SplashPage },
+    //   { title: 'TV', component: HomePage },
+    //   { title: 'Music', component: SplashPage },
+    //   { title: 'Games', component: HomePage },
+    //   { title: 'Horror', component: SplashPage },
+    //   { title: 'Technology', component: HomePage },
+    //   { title: 'Kids', component: SplashPage },
+    //   { title: 'Random', component: HomePage },
+    //   { title: 'All Polls', component: SplashPage }
+    // ];
+
+    this.userOptions = [
+      { title: 'Profile', component: HomePage },
+      { title: 'History', component: SplashPage },
+      { title: 'Rewards', component: HomePage },
+      { title: 'Logout', component: SplashPage },
     ];
 
   }

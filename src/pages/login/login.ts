@@ -2,13 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SplashPage } from '../splash/splash';
 import { LandingPage } from '../landing/landing';
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { DashboardPage } from '../dashboard/dashboard';
 
 @IonicPage()
 @Component({
@@ -29,6 +23,10 @@ export class LoginPage {
 
   toSplash() {
     this.navCtrl.push(SplashPage)
+  }
+
+  toDashboard() {
+    this.navCtrl.setRoot(DashboardPage)
   }
 
   backToLanding() {
