@@ -4,13 +4,6 @@ import { HomePage } from '../home/home';
 import { SplashPage } from '../splash/splash';
 import { DashboardPage } from '../dashboard/dashboard';
 
-/**
- * Generated class for the CategoriesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-categories',
@@ -45,11 +38,11 @@ export class CategoriesPage {
   }
 
   toCategories() {
-    this.navCtrl.push(CategoriesPage)
+    this.navCtrl.setRoot(CategoriesPage, {}, { animate: true, duration: 300 })
   }
 
   toDashboard() {
-    this.navCtrl.push(DashboardPage)
+    this.navCtrl.setRoot(DashboardPage, {}, { animate: true, duration: 300 })
   }
 
 

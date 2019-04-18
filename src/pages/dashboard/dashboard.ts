@@ -22,11 +22,11 @@ export class DashboardPage {
   }
 
   toCategories() {
-    this.navCtrl.push(CategoriesPage)
+    this.navCtrl.setRoot(CategoriesPage, {}, { animate: true, duration: 300 })
   }
 
   toDashboard() {
-    this.navCtrl.push(DashboardPage)
+    this.navCtrl.setRoot(DashboardPage, {}, { animate: true, duration: 300 })
   }
 
 }

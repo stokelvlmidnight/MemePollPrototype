@@ -3,20 +3,20 @@
       <!-- <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button> -->
-    <ion-title>
+    <!-- <ion-title>
         <span id='navText'>MemePoll</span>
         <button *ngIf='false' ion-button (click)='signIn()' clear small float-right>Sign In</button>
         <button ion-button menuToggle='right' float-right>
-        <ion-chip color='black' *ngIf='true' float-right>
+        <ion-chip color='black' *ngIf='true' float-right> -->
             <!-- <ion-label>{{ apiProvider.githubUserInfo.login }}</ion-label> -->
-            <ion-label>userName</ion-label>
-          <ion-avatar>
+            <!-- <ion-label>userName</ion-label>
+          <ion-avatar> -->
            <!-- <img [src]="apiProvider.githubUserInfo.avatar_url" > -->
-           <ion-icon name="contact"></ion-icon>
+           <!-- <ion-icon name="contact"></ion-icon>
          </ion-avatar>
         </ion-chip>
       </button>
-    </ion-title>
+    </ion-title> -->
 
   </ion-navbar>
 </ion-header>
@@ -31,16 +31,16 @@
 <ion-footer>
     <ion-toolbar position="bottom">
       <ion-segment [(ngModel)]="icons" color="secondary">
-        <ion-segment-button value="home" (click)='toDashboard()'>
+        <ion-segment-button value="1" (click)='toDashboard()'>
             <ion-icon name="home"></ion-icon>
         </ion-segment-button>
-        <ion-segment-button value="categories" (click)='toCategories()'>
+        <ion-segment-button value="2" (click)='toCategories()'>
             <ion-icon name="list"></ion-icon>
         </ion-segment-button>
-        <ion-segment-button value="myPolls" (click)='toCategories()'>
+        <ion-segment-button value="3" (click)='toCategories()'>
             <ion-icon name="stats"></ion-icon>
         </ion-segment-button>
-        <ion-segment-button value="rewards" (click)='toCategories()'>
+        <ion-segment-button value="4" (click)='toCategories()'>
             <ion-icon name="cash"></ion-icon>
         </ion-segment-button>
       </ion-segment>
