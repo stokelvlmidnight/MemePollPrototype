@@ -31,7 +31,7 @@ export class MyApp {
               ) {
 
     this.initializeApp();
-
+    this.uiProvider.enableUI = false
     this.userOptions = [
       { title: 'Profile', component: HomePage },
       { title: 'History', component: SplashPage },
@@ -62,5 +62,9 @@ export class MyApp {
 
   toDashboard() {
     this.nav.setRoot(DashboardPage, {}, { animate: true, duration: 300 })
+  }
+
+  toLoader() {
+    this.nav.setRoot(SplashPage, {}, { animate: true, duration: 300 })
   }
 }

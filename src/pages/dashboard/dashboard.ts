@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CategoriesPage } from '../categories/categories';
 import { UiProvider } from '../../providers/ui/ui';
+import { SplashPage } from '../splash/splash';
 
 @IonicPage()
 @Component({
@@ -15,15 +16,17 @@ export class DashboardPage {
     autoHeight: true
   };
 
+  array:any = [1,2,3,4,5,6,7,8,9,10]
+
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public uiProvider: UiProvider) {
   }
 
   ionViewWillLoad() {
-    this.uiProvider.enable = true
-    console.log(this.uiProvider.enable);
-    this.uiProvider.scrollContentMargin()
+    this.uiProvider.enableUI = true
+    console.log(this.uiProvider.enableUI);
+
   }
 
   toCategories() {
@@ -33,5 +36,6 @@ export class DashboardPage {
   toDashboard() {
     this.navCtrl.setRoot(DashboardPage, {}, { animate: true, duration: 300 })
   }
+
 
 }

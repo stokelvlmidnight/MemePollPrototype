@@ -1,27 +1,11 @@
+<!-- [ngStyle]="{'margin-top' : '56px', 'margin-bottom' : '56px'}" -->
 
-
-<ion-content padding [ngStyle]="{'margin-top' : '56px', 'margin-bottom' : '56px'}">
+<ion-content padding >
     <ion-item>
         Popular
       </ion-item>
       <ion-slides slidesPerView='1'>
-        <ion-slide>
-            <ion-card>
-                <a><img src="https://via.placeholder.com/308"></a>
-                <ion-card-content>
-                    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-                  </ion-card-content>
-            </ion-card>
-        </ion-slide>
-        <ion-slide>
-            <ion-card>
-                <a><img src="https://via.placeholder.com/308"></a>
-                <ion-card-content>
-                    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-                  </ion-card-content>
-            </ion-card>
-        </ion-slide>
-        <ion-slide>
+        <ion-slide *ngFor="let p of array">
             <ion-card>
                 <a><img src="https://via.placeholder.com/308"></a>
                 <ion-card-content>
@@ -35,32 +19,7 @@
           Recomended 
         </ion-item>
       <ion-slides slidesPerView='2'>
-          <ion-slide>
-              <ion-card>
-                  <a><img src="https://via.placeholder.com/150"></a>
-              </ion-card>
-          </ion-slide>
-          <ion-slide>
-              <ion-card>
-                  <a><img src="https://via.placeholder.com/150"></a>
-              </ion-card>
-          </ion-slide>
-          <ion-slide>
-              <ion-card>
-                  <a><img src="https://via.placeholder.com/150"></a>
-              </ion-card>
-          </ion-slide>
-          <ion-slide>
-              <ion-card>
-                  <a><img src="https://via.placeholder.com/150"></a>
-              </ion-card>
-          </ion-slide>
-          <ion-slide>
-              <ion-card>
-                  <a><img src="https://via.placeholder.com/150"></a>
-              </ion-card>
-          </ion-slide>
-          <ion-slide>
+          <ion-slide *ngFor="let p of array">
               <ion-card>
                   <a><img src="https://via.placeholder.com/150"></a>
               </ion-card>
@@ -71,47 +30,7 @@
             My Polls 
           </ion-item>
         <ion-slides slidesPerView='3'>
-            <ion-slide>
-                <ion-card>
-                    <a><img src="https://via.placeholder.com/100"></a>
-                </ion-card>
-            </ion-slide>
-            <ion-slide>
-                <ion-card>
-                    <a><img src="https://via.placeholder.com/100"></a>
-                </ion-card>
-            </ion-slide>
-            <ion-slide>
-                <ion-card>
-                    <a><img src="https://via.placeholder.com/100"></a>
-                </ion-card>
-            </ion-slide>
-            <ion-slide>
-                <ion-card>
-                    <a><img src="https://via.placeholder.com/100"></a>
-                </ion-card>
-            </ion-slide>
-            <ion-slide>
-                <ion-card>
-                    <a><img src="https://via.placeholder.com/100"></a>
-                </ion-card>
-            </ion-slide>
-            <ion-slide>
-                <ion-card>
-                    <a><img src="https://via.placeholder.com/100"></a>
-                </ion-card>
-            </ion-slide>
-            <ion-slide>
-                <ion-card>
-                    <a><img src="https://via.placeholder.com/100"></a>
-                </ion-card>
-            </ion-slide>
-            <ion-slide>
-                <ion-card>
-                    <a><img src="https://via.placeholder.com/100"></a>
-                </ion-card>
-            </ion-slide>
-            <ion-slide>
+            <ion-slide *ngFor="let p of array">
                 <ion-card>
                     <a><img src="https://via.placeholder.com/100"></a>
                 </ion-card>
@@ -121,48 +40,8 @@
           <ion-item>
               Whatever 
             </ion-item>
-          <ion-slides slidesPerView='3'>
-              <ion-slide>
-                  <ion-card>
-                      <a><img src="https://via.placeholder.com/100"></a>
-                  </ion-card>
-              </ion-slide>
-              <ion-slide>
-                  <ion-card>
-                      <a><img src="https://via.placeholder.com/100"></a>
-                  </ion-card>
-              </ion-slide>
-              <ion-slide>
-                  <ion-card>
-                      <a><img src="https://via.placeholder.com/100"></a>
-                  </ion-card>
-              </ion-slide>
-              <ion-slide>
-                  <ion-card>
-                      <a><img src="https://via.placeholder.com/100"></a>
-                  </ion-card>
-              </ion-slide>
-              <ion-slide>
-                  <ion-card>
-                      <a><img src="https://via.placeholder.com/100"></a>
-                  </ion-card>
-              </ion-slide>
-              <ion-slide>
-                  <ion-card>
-                      <a><img src="https://via.placeholder.com/100"></a>
-                  </ion-card>
-              </ion-slide>
-              <ion-slide>
-                  <ion-card>
-                      <a><img src="https://via.placeholder.com/100"></a>
-                  </ion-card>
-              </ion-slide>
-              <ion-slide>
-                  <ion-card>
-                      <a><img src="https://via.placeholder.com/100"></a>
-                  </ion-card>
-              </ion-slide>
-              <ion-slide>
+          <ion-slides slidesPerView='3' *ngFor="let p of array">
+              <ion-slide *ngFor="let p of array">
                   <ion-card>
                       <a><img src="https://via.placeholder.com/100"></a>
                   </ion-card>
