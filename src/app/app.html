@@ -1,20 +1,5 @@
-<!-- <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Categories</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
-
-</ion-menu> -->
-<ion-header *ngIf='uiProvider.enable'>
+<ion-header *ngIf='uiProvider?.enable'>
   <ion-navbar>
     <!-- <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -57,11 +42,12 @@
 <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
 
-<ion-footer *ngIf='uiProvider.enable'>
+<ion-footer *ngIf='uiProvider?.enable'>
     <ion-toolbar position="bottom">
       <ion-segment [(ngModel)]="icons" color="secondary">
         <ion-segment-button value="1" (click)='toDashboard()'>
             <ion-icon name="home"></ion-icon>
+            <ion-label>Javascript</ion-label>
         </ion-segment-button>
         <ion-segment-button value="2" (click)='toCategories()'>
             <ion-icon name="list"></ion-icon>
@@ -69,7 +55,7 @@
         <ion-segment-button value="3" (click)='toCategories()'>
             <ion-icon name="stats"></ion-icon>
         </ion-segment-button>
-        <ion-segment-button value="4" (click)='toCategories()'>
+        <ion-segment-button value="4" (click)='uiProvider.scrollContentMargin()'>
             <ion-icon name="cash"></ion-icon>
         </ion-segment-button>
       </ion-segment>

@@ -20,9 +20,9 @@ export class DashboardPage {
               public uiProvider: UiProvider) {
   }
 
-  ionViewDidLoad() {
+  ionViewWillLoad() {
     this.uiProvider.enable = true
-    console.log('ionViewDidLoad DashboardPage');
+    console.log(this.uiProvider.enable);
     this.uiProvider.scrollContentMargin()
   }
 

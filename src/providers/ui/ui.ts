@@ -4,18 +4,20 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class UiProvider {
 
-  enable: boolean = false
+  enable:boolean
+  styleObj:object
 
   constructor(public http: HttpClient) {
     console.log('Hello UiProvider Provider');
+    this.enable = false
   }
 
   scrollContentMargin() {
-    let scrollContent = document.querySelector('scroll-content')
-    // scrollContent[0].style.marginTop = "56px";
-    console.log(scrollContent)
-
-    // document.getElementsByClassName("example").style.margin-bottom = '56px'
+    this.styleObj = {'margin-top' : '56px', 'margin-bottom' : '56px'}
+    
+    // let scrollContent:HTMLElement = document.getElementsByClassName("scroll-content")[0] as HTMLElement
+    // scrollContent.style.marginTop = "56px";
+    // console.log(scrollContent)
   }
 
 }
