@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SplashPage } from '../splash/splash';
 import { LandingPage } from '../landing/landing';
 import { DashboardPage } from '../dashboard/dashboard';
+import { UiProvider } from '../../providers/ui/ui';
 
 @IonicPage()
 @Component({
@@ -14,11 +15,13 @@ export class LoginPage {
   showLogin:boolean = false
 
   constructor(public navCtrl: NavController, 
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              public uiProvider: UiProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+    this.uiProvider.enableSegments = false
   }
 
   toSplash() {

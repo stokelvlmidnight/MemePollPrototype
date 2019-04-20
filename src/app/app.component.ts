@@ -8,6 +8,9 @@ import { SplashPage } from '../pages/splash/splash';
 import { LoginPage } from '../pages/login/login';
 import { LandingPage } from '../pages/landing/landing';
 import { DashboardPage } from '../pages/dashboard/dashboard';
+import { CategoriesPage } from '../pages/categories/categories';
+
+import { UiProvider } from '../providers/ui/ui';
 
 @Component({
   templateUrl: 'app.html'
@@ -21,26 +24,13 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
   userOptions: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+  constructor(public platform: Platform, 
+              public statusBar: StatusBar, 
+              public splashScreen: SplashScreen,
+              public uiProvider: UiProvider,
+              ) {
 
-    // used for an example of ngFor and navigation
-    // this.pages = [
-    //   { title: 'Sports', component: HomePage },
-    //   { title: 'Health', component: SplashPage },
-    //   { title: 'Food', component: HomePage },
-    //   { title: 'Politics', component: SplashPage },
-    //   { title: 'Art', component: HomePage },
-    //   { title: 'Movies', component: SplashPage },
-    //   { title: 'TV', component: HomePage },
-    //   { title: 'Music', component: SplashPage },
-    //   { title: 'Games', component: HomePage },
-    //   { title: 'Horror', component: SplashPage },
-    //   { title: 'Technology', component: HomePage },
-    //   { title: 'Kids', component: SplashPage },
-    //   { title: 'Random', component: HomePage },
-    //   { title: 'All Polls', component: SplashPage }
-    // ];
+    this.initializeApp();
 
     this.userOptions = [
       { title: 'Profile', component: HomePage },
@@ -64,5 +54,13 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  toCategories() {
+    this.nav.setRoot(CategoriesPage, {}, { animate: true, duration: 300 })
+  }
+
+  toDashboard() {
+    this.nav.setRoot(DashboardPage, {}, { animate: true, duration: 300 })
   }
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CategoriesPage } from '../categories/categories';
+import { UiProvider } from '../../providers/ui/ui';
 
 @IonicPage()
 @Component({
@@ -14,11 +15,15 @@ export class DashboardPage {
     autoHeight: true
   };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public uiProvider: UiProvider) {
   }
 
   ionViewDidLoad() {
+    this.uiProvider.enable = true
     console.log('ionViewDidLoad DashboardPage');
+    this.uiProvider.scrollContentMargin()
   }
 
   toCategories() {

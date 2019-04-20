@@ -16,6 +16,8 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { PollResultPage } from '../pages/poll-result/poll-result';
 import { LandingPage } from '../pages/landing/landing';
 import { CategoriesPage } from '../pages/categories/categories';
+import { UiProvider } from '../providers/ui/ui';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { CategoriesPage } from '../pages/categories/categories';
     IonicModule.forRoot(MyApp, {
       pageTransition: 'fade'
     }),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -57,7 +60,8 @@ import { CategoriesPage } from '../pages/categories/categories';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    UiProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}
